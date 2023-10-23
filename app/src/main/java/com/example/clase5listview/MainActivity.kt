@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         listView = findViewById(R.id.listview)
         button = findViewById(R.id.button)
 
-        val platos = listOf("Desayuno", "Almuerzo", "Merienda", "Cena")
+        val platos = listOf("Desayuno", "Almuerzo", "Cena")
         //platos.add("Postre")
 
         val paises = listOf("Venezuela", "Chile", "Argentina", "Peru")
