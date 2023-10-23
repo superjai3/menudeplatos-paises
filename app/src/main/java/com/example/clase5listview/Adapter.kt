@@ -3,6 +3,7 @@ package com.example.clase5listview
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -14,13 +15,23 @@ class Adapter() : ListAdapter<Comida, Adapter.ViewHolder>(DiffCallBack) {
         private val nivel_de_sabrosura : TextView = view.findViewById(R.id.textViewNivelDeSabrosura)
         private val origen : TextView = view.findViewById(R.id.textViewOrigen)
         private val ingredientes : TextView = view.findViewById(R.id.textViewIngredientes)
+        private val imagenBandera: ImageView = view.findViewById(R.id.imageViewBandera)
 
         fun bind (comida: Comida) {
-            name.text = comida.name.toString()
-            nivel_de_sabrosura.text = comida.nivel_de_sabrosura.toString()
-            origen.text = comida.origen
-            ingredientes.text = comida.ingredientes
+            name.text = "Menú: " + comida.name.toString()
+            nivel_de_sabrosura.text = "Nivel de Sabrosura: " + comida.nivel_de_sabrosura.toInt()
+            origen.text = "Origen: " + comida.origen.toString()
+            ingredientes.text = "Ingredientes: " + comida.ingredientes.toString()
 
+            val imagen = when (comida.origen){
+                Bandera.ARGENTINA -> R.drawable.argentina
+                Bandera.CHILE -> R.drawable.chile
+                Bandera.PERU -> R.drawable.peru
+                else -> {
+                    Bandera.VENEZUELA ; R.drawable.venezuela
+                }
+            }
+            imagenBandera.setImageResource(imagen as Int)
         }
     }
 

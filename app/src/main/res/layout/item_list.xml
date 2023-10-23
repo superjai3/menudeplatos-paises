@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageViewImage"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginStart="4dp"
@@ -26,7 +26,7 @@
         android:layout_marginTop="8dp"
         android:text="Nombre"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/imageViewImage"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -37,7 +37,7 @@
         android:layout_marginTop="8dp"
         android:text="Sabrosura"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/imageViewImage"
         app:layout_constraintTop_toBottomOf="@+id/textViewName" />
 
     <TextView
@@ -48,7 +48,7 @@
         android:layout_marginTop="8dp"
         android:text="Origen"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/imageViewImage"
         app:layout_constraintTop_toBottomOf="@+id/textViewNivelDeSabrosura" />
 
     <TextView
@@ -59,11 +59,11 @@
         android:layout_marginTop="8dp"
         android:text="Ingredientes"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/imageViewImage"
         app:layout_constraintTop_toBottomOf="@+id/textViewOrigen" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageViewBandera"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginTop="8dp"
