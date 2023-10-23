@@ -23,7 +23,7 @@ class SegundaMainActivity : AppCompatActivity() {
 
         recyclerView = findViewById(R.id.recycler_list)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        adapter = Adapter()
+        adapter = Adapter(this)
         recyclerView.adapter = adapter
 
         val result = intent.extras
@@ -48,13 +48,13 @@ class SegundaMainActivity : AppCompatActivity() {
 
     private fun getComidas(): MutableList <Comida> {
         return mutableListOf(
-            Comida(1, "Medialunas", 5, Bandera.ARGENTINA, "Harina, Manteca, Azúcar, Levadura, Leche", ComidaTipo.DESAYUNO, null),
-            Comida(2, "Facturas", 4, Bandera.ARGENTINA, "Harina, Manteca, Azúcar, Levadura, Crema pastelera", ComidaTipo.DESAYUNO, null),
-            Comida(3, "Churros", 5, Bandera.ARGENTINA, "Harina, Agua, Sal, Aceite, Azúcar", ComidaTipo.DESAYUNO, null),
-            Comida(4, "Mate Cocido", 3,Bandera.ARGENTINA, "Yerba mate, Agua caliente, Leche (opcional), Azúcar (opcional)", ComidaTipo.DESAYUNO, null),
-            Comida(5, "Tostadas con Dulce de Leche", 4, Bandera.ARGENTINA, "Pan, Dulce de leche", ComidaTipo.DESAYUNO, null),
-            Comida(6, "Arepas", 4, Bandera.VENEZUELA, "Harina de Maíz, Agua, Sal, Rellenos varios", ComidaTipo.DESAYUNO, null),
-            Comida(7, "Cachapas", 5, Bandera.VENEZUELA, "Maíz tierno, Harina de maíz, Leche, Azúcar, Queso", ComidaTipo.DESAYUNO, null),
+            Comida(1, "Medialunas", 5, Bandera.ARGENTINA, "Harina, Manteca, Azúcar, Levadura, Leche", ComidaTipo.DESAYUNO, "https://assets.elgourmet.com/wp-content/uploads/2011/09/shutterstock_1366373012-1024x683.jpg.webp"),
+            Comida(2, "Facturas", 4, Bandera.ARGENTINA, "Harina, Manteca, Azúcar, Levadura, Crema pastelera", ComidaTipo.DESAYUNO, "https://pampadirect.com/product_images/uploaded_images/facturas-de-argentina-para-la-merienda.jpg"),
+            Comida(3, "Churros", 5, Bandera.ARGENTINA, "Harina, Agua, Sal, Aceite, Azúcar", ComidaTipo.DESAYUNO, "https://d1kxxrc2vqy8oa.cloudfront.net/wp-content/uploads/2020/09/28221827/RFB-1208-1-churrosrellenos.jpg"),
+            Comida(4, "Mate Cocido", 3,Bandera.ARGENTINA, "Yerba mate, Agua caliente, Leche (opcional), Azúcar (opcional)", ComidaTipo.DESAYUNO, "https://www.noticiasagropecuarias.com/wp-content/uploads/2021/03/mate-cocido-el.jpg"),
+            Comida(5, "Tostadas con Dulce de Leche", 4, Bandera.ARGENTINA, "Pan, Dulce de leche", ComidaTipo.DESAYUNO, "https://cdn7.kiwilimon.com/recetaimagen/24737/19978.jpg"),
+            Comida(6, "Arepas", 4, Bandera.VENEZUELA, "Harina de Maíz, Agua, Sal, Rellenos varios", ComidaTipo.DESAYUNO, "https://i.blogs.es/8ad4da/arepas/450_1000.jpg"),
+            Comida(7, "Cachapas", 5, Bandera.VENEZUELA, "Maíz tierno, Harina de maíz, Leche, Azúcar, Queso", ComidaTipo.DESAYUNO, "https://i.ytimg.com/vi/4W4z6eFOMwQ/maxresdefault.jpg"),
             Comida(8, "Tequeños", 5, Bandera.VENEZUELA, "Masa para empanadas, Queso blanco, Aceite para freír", ComidaTipo.DESAYUNO, null),
             Comida(9, "Mandocas", 4, Bandera.VENEZUELA, "Harina de maíz, Papelón (panela), Anís en grano, Canela en polvo", ComidaTipo.DESAYUNO, null),
             Comida(10, "Bollos Pelones", 4, Bandera.VENEZUELA, "Harina de maíz, Carne de res desmechada, Cebolla, Pimentón", ComidaTipo.DESAYUNO, null),
